@@ -87,7 +87,7 @@ var environment = "production";
 And now, with ConfigurationManagerLight, we can simply do this
 
 ```
-var magicString = ConfigurationManagerLight.AppSettings["environment"];
+var environment = ConfigurationManagerLight.AppSettings["environment"];
 ```
 
 ###Great, but how do we update our Touch/Droid apps after they've been bundled?###
