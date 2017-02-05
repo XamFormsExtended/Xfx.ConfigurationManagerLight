@@ -26,6 +26,7 @@ ConfigurationManagerLightBootstrapper.Init();
 ```
 
 **Droid**
+
 App.config should be located in your `Assets` folder and build action set to `AndroidAsset`
 
 ```
@@ -39,6 +40,7 @@ public class MainActivity {
 ```
 
 **Touch**
+
 App.config should be located in your `Assets` folder and build action set to `BundleResource`
 
 ```
