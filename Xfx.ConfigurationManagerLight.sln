@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xfx.ConfigurationManagerLig
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{6C747963-3A47-4313-994A-226C443FE658}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xfx.ConfigurationManagerLight.Full", "src\Xfx.ConfigurationManagerLight.Full\Xfx.ConfigurationManagerLight.Full.csproj", "{BEAFAD12-AF0C-41DC-A7BC-6BB9DC8ECA8A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xfx.ConfigurationManagerLight.Touch", "src\Xfx.ConfigurationManagerLight.Touch\Xfx.ConfigurationManagerLight.Touch.csproj", "{CBF85D38-49BC-4053-A7AC-774E8504CBBD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xfx.ConfigurationManagerLight.Web", "src\Xfx.ConfigurationManagerLight.Web\Xfx.ConfigurationManagerLight.Web.csproj", "{A2843E5E-029D-414F-9A19-546446720707}"
@@ -35,10 +33,6 @@ Global
 		{1AE0D8EC-A3BA-4B82-B1A0-AE1EF0AFCF5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AE0D8EC-A3BA-4B82-B1A0-AE1EF0AFCF5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AE0D8EC-A3BA-4B82-B1A0-AE1EF0AFCF5F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BEAFAD12-AF0C-41DC-A7BC-6BB9DC8ECA8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BEAFAD12-AF0C-41DC-A7BC-6BB9DC8ECA8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BEAFAD12-AF0C-41DC-A7BC-6BB9DC8ECA8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BEAFAD12-AF0C-41DC-A7BC-6BB9DC8ECA8A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CBF85D38-49BC-4053-A7AC-774E8504CBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CBF85D38-49BC-4053-A7AC-774E8504CBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CBF85D38-49BC-4053-A7AC-774E8504CBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU

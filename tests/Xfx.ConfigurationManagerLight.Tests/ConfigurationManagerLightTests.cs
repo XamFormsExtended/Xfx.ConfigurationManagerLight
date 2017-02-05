@@ -14,16 +14,33 @@ namespace Tests
         }
 
         [Test]
-        public void ShouldGetValuesFromConfig()
+        public void ShouldGetValuesForAppSettings()
         {
             // setup
+            const string expectedFoo = "my foo";
+            const string expectedBar = "my bar";
 
             // execute
 
             // assert
-            ConfigurationManagerLight.AppSettings["foo"].Should().Be("my foo");
-            ConfigurationManagerLight.AppSettings["bar"].Should().Be("my bar");
+            ConfigurationManagerLight.AppSettings["foo"].Should().Be(expectedFoo);
+            ConfigurationManagerLight.AppSettings["bar"].Should().Be(expectedBar);
             ConfigurationManagerLight.AppSettings.Count.Should().Be(2);
+        }
+
+        [Test]
+        public void ShouldGetValuesForConnectionString()
+        {
+            // setup
+            const string expectedProvider = "my provider";
+            const string expectedString = "my connection string";
+
+            // execute
+
+            // assert
+            ConfigurationManagerLight.ConnectionStrings["test"].ProviderName.Should().Be(expectedProvider);
+            ConfigurationManagerLight.ConnectionStrings["test"].ConnectionString.Should().Be(expectedString);
+
         }
     }
 }

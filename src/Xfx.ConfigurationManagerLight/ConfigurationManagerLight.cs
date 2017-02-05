@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Xml;
@@ -8,7 +9,19 @@ namespace Xfx
 {
     public class ConfigurationManagerLight
     {
-        public static NameValueCollection AppSettings { get; protected set; }
+        public static NameValueCollection AppSettings { get; private set; }
+
+        public static ReadOnlyDictionary<string, ConnectionStringSettings> ConnectionStrings { get; private set; }
+
+        protected static void InitInternal(List<KeyValuePair<string, string>> keys,
+            Dictionary<string, ConnectionStringSettings> conStr)
+        {
+            AppSettings = new NameValueCollection(keys);
+            if (conStr != null)
+            {
+                ConnectionStrings = new ReadOnlyDictionary<string, ConnectionStringSettings>(conStr);
+            }
+        }
 
         protected static void Init(StreamReader streamReader)
         {
@@ -25,16 +38,26 @@ namespace Xfx
                     default:
                         if (count > 1)
                         {
-                            var dict = document.Descendants()
+                            var appSettings = document.Descendants()
                                 .Where(t => t.Name == "appSettings")
                                 .Elements()
-                                .ToList();
-                            var collection = dict
+                                .ToList()
                                 .Select(item => new KeyValuePair<string, string>(
-                                    item.Attribute("key").Value, 
+                                    item.Attribute("key").Value,
                                     item.Attribute("value").Value))
                                 .ToList();
-                            AppSettings = new NameValueCollection(collection);
+
+                            var connectionStrings = document.Descendants()
+                                .Where(t => t.Name == "connectionStrings")
+                                .Elements()
+                                .ToDictionary(t => t.Attribute("key").Value.ToString(),
+                                    t =>
+                                        new ConnectionStringSettings(t.Attribute("name").Value.ToString(),
+                                            t.Attribute("providerName").Value.ToString(),
+                                            t.Attribute("connectionString").Value.ToString()));
+
+                            AppSettings = new NameValueCollection(appSettings);
+                            ConnectionStrings = new ReadOnlyDictionary<string, ConnectionStringSettings>(connectionStrings);
                         }
                         break;
                 }

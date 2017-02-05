@@ -62,9 +62,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Xfx.ConfigurationManagerLight.Full\Xfx.ConfigurationManagerLight.Full.csproj">
-      <Project>{beafad12-af0c-41dc-a7bc-6bb9dc8eca8a}</Project>
-      <Name>Xfx.ConfigurationManagerLight.Full</Name>
+    <ProjectReference Include="..\..\src\Xfx.ConfigurationManagerLight.Web\Xfx.ConfigurationManagerLight.Web.csproj">
+      <Project>{A2843E5E-029D-414F-9A19-546446720707}</Project>
+      <Name>Xfx.ConfigurationManagerLight.Web</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\src\Xfx.ConfigurationManagerLight\Xfx.ConfigurationManagerLight.csproj">
       <Project>{d5099950-0569-4dde-89b4-667ddad2ef77}</Project>
