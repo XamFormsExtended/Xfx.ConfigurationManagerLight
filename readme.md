@@ -20,7 +20,8 @@ Once you've brought ConfigurationManagerLight into your application, you are req
 **Desktop or Web**
 
 App.config should be exactly as you would always do it.
-```
+
+```csharp
 // somewhere in your app startup
 ConfigurationManagerLightBootstrapper.Init();
 ```
@@ -29,7 +30,7 @@ ConfigurationManagerLightBootstrapper.Init();
 
 App.config should be located in your `Assets` folder and build action set to `AndroidAsset`
 
-```
+```csharp
 public class MainActivity {
     protected override void OnCreate(Bundle bundle)
 	{
@@ -43,7 +44,7 @@ public class MainActivity {
 
 App.config should be located in your `Assets` folder and build action set to `BundleResource`
 
-```
+```csharp
 public partial class AppDelegate
 {
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
@@ -56,7 +57,7 @@ public partial class AppDelegate
 
 *note: config format*
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8" ?>
 <configuration>
     <appSettings>
