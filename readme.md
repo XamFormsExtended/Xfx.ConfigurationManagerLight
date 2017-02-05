@@ -4,6 +4,7 @@ Configuration Manager Light provides an easy way to use XML `App.settings` acros
 
 ###Platform Support###
 
+- [x] Portable (yes, call config from your shared library)
 - [x] Windows Deskop
 - [x] ASP.Net Web App
 - [x] Android
