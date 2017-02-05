@@ -4,7 +4,7 @@ namespace Xfx
 {
     public class ConfigurationManagerLightBootstrapper : ConfigurationManagerLight
     {
-        public static void Init(string config = "Assets/app.config")
+        public static void Init(string config = "Assets/App.config")
         {
             using (var stream = new StreamReader(config))
             {
