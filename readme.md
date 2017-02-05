@@ -69,7 +69,7 @@ public partial class AppDelegate
 
 If you're looking at this repo, you probaby already have a need for App.config in your app; that being said however, here's my personal rational for needing this.
 
-When we deliver our app through the DevOps release pipeline, we needed a way to update config for various environments without recompiling the app. Basically, the old way was to use something like this (and it's damn ugly and hard to maintain)
+When we deliver our app through the DevOps release pipeline, we needed a way to update config for various environments without recompiling the app. Basically, the old way was to use something like this... it's damn ugly, hard to maintain, and required you to recompile for every environment.
 
 ```
 #if _DEV_
