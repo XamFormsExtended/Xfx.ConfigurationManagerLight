@@ -15,6 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xfx.ConfigurationManagerLig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Xfx.ConfigurationManagerLight.Web", "src\Xfx.ConfigurationManagerLight.Web\Xfx.ConfigurationManagerLight.Web.csproj", "{A2843E5E-029D-414F-9A19-546446720707}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Stuff", "Stuff", "{2CE740EB-B6B8-4593-B64D-A52FA67A30C9}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
