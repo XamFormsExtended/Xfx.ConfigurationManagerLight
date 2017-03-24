@@ -1,8 +1,8 @@
-##ConfigurationManagerLight##
+## ConfigurationManagerLight
 
 Configuration Manager Light provides an easy way to use XML `App.settings` across your desktop, web, and mobile applications.
 
-###Platform Support###
+### Platform Support
 
 - [x] Portable (yes, call config from your shared library)
 - [x] Windows Deskop
@@ -13,7 +13,7 @@ Configuration Manager Light provides an easy way to use XML `App.settings` acros
 - [ ] Linux
 - [ ] Mac OS X
 
-###Gettings Started###
+### Gettings Started
 
 Once you've brought ConfigurationManagerLight into your application, you are required to create your App.config file and initialize it on your respective platform.
 
@@ -69,7 +69,7 @@ public partial class AppDelegate
 </configuration>
 ```
 
-###What's the point?###
+### What's the point?
 
 If you're looking at this repo, you probaby already have a need for App.config in your app; that being said however, here's my personal rational for needing this.
 
@@ -91,11 +91,11 @@ And now, with ConfigurationManagerLight, we can simply do this
 var environment = ConfigurationManagerLight.AppSettings["environment"];
 ```
 
-###Great, but how do we update our Touch/Droid apps after they've been bundled?###
+### Great, but how do we update our Touch/Droid apps after they've been bundled?
 
 So this is the tricky part, and somthing that I won't cover here. The basics of it is that your app bundle for Touch and Droid apps is simply a zip file. You need to unzip your app, update the `App.config` with the new values, and then re-zip and re-sign your app. I've personally scripted this to happen within our Octopus Deploy deployment steps, and once it's setup, it really works great.
 
-###License###
+### License
 
 Use granted via the [Microsoft Public License](https://opensource.org/licenses/MS-PL)
 
