@@ -1,17 +1,14 @@
 using System.IO;
-using Android.App;
+using Android.Content;
 
 namespace Xfx
 {
     public class ConfigurationManagerLightBootstrapper : ConfigurationManagerLight
     {
-        public static void Init(Activity activity, string config = "App.config")
-        {
-            var assets = activity.Assets;
-            using (var stream = new StreamReader(assets.Open(config)))
-            {
+        public static void Init(Context context, string config = "App.config")
+        {;
+            using (var stream = new StreamReader(context.Assets.Open(config)))
                 Init(stream);
-            }
         }
     }
 }
